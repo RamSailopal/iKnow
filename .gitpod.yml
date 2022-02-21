@@ -1,8 +1,6 @@
-github:
-  prebuilds:
-    master: true
 tasks:
   - name: Docker-compose
+    before: echo "Building environment"
     init: cd Docker && docker-compose up -d && gp sync-done prev
     command: echo 'Built environment'
 
