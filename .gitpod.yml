@@ -1,6 +1,16 @@
 tasks:
-  - init: |
+  - name: Docker compose
+    init: |
       echo 'TODO: build project'
     command: |
       cd Docker && docker-compose up
 
+  - name: YottaDB terminal
+    init: gp sync-await prev
+    command: docker exec -it yottadb /opt/yottadb/current/ydb
+    openMode: split-right
+ 
+  - name: iKnow terminal
+    init: gp sync-await prev
+    command:  docker exec -it iknow /bin/bash -c "cd /home/iknow"
+    openMode: split-right
