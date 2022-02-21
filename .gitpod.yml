@@ -1,5 +1,6 @@
 tasks:
   - name: Docker-compose
+    init: echo 'Building environment'
     command: cd Docker && docker-compose up && gp sync-done prev
 
   - name: YottaDB-terminal
