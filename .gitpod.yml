@@ -1,14 +1,14 @@
 tasks:
-  - name: Docker compose
+  - name: Docker-compose
     init: gp sync-done prev
     command: cd Docker && docker-compose up
 
-  - name: YottaDB terminal
+  - name: YottaDB-terminal
     init: gp sync-await prev
     command: docker exec -it yottadb /opt/yottadb/current/ydb
     openMode: split-right
  
-  - name: iKnow terminal
+  - name: iKnow-terminal
     init: gp sync-await prev
     command:  docker exec -it iknow /bin/bash -c "cd /home/iknow"
     openMode: split-right
