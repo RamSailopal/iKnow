@@ -1,0 +1,32 @@
+#
+#       AUTHOR - Raman Sailopal
+#
+#       docker compose yml file for the YottaDB-Dashboard stack
+#
+version: "2"
+services:
+ yottadb:
+   hostname: yottadb
+   image: docker.io/ramb0/yottadb-gateway
+   networks:
+      - yottanet
+   volumes:
+      - "../yottaentry:/home/yotta"
+   ports:
+      - 7041:7041
+   mem_limit: 1G
+   entrypoint: /home/yotta/entrypoint.sh
+
+
+ iknow:
+   image: docker.io/ramb0/iknow
+   hostname: iknow
+   volumes:
+      - ../iknow:/home/iknow
+   networks:
+      - yottanet
+
+networks:
+    yottanet:
+volumes:
+    app-volume:
