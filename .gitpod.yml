@@ -10,5 +10,5 @@ tasks:
  
   - name: iKnow-terminal
     init: gp sync-await prev
-    command:  docker exec -it iknow /bin/bash -c "cd /home/iknow"
+    command:  docker exec -it iknow /bin/bash -c "cd /home/iknow && bash"
     openMode: split-right
