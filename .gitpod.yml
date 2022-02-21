@@ -1,9 +1,7 @@
 tasks:
   - name: Docker compose
-    init: |
-      echo 'TODO: build project'
-    command: |
-      cd Docker && docker-compose up
+    init: gp sync-done prev
+    command: cd Docker && docker-compose up
 
   - name: YottaDB terminal
     init: gp sync-await prev
