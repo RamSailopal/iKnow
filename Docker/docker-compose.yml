@@ -7,6 +7,7 @@ version: "2"
 services:
  yottadb:
    hostname: yottadb
+   container_name: yottadb
    image: docker.io/ramb0/yottadb-gateway
    networks:
       - yottanet
@@ -21,6 +22,7 @@ services:
  iknow:
    image: docker.io/ramb0/iknow
    hostname: iknow
+   container_name: iknow
    volumes:
       - ../iknow:/home/iknow
    networks:
