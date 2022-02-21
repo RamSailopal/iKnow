@@ -13,7 +13,7 @@ In the demonsteation, three pieces of text are processed by iKnow. The sentences
     ^IKNOW("text","I liked the striped pijamas, but the slippers didn't really fit with it")=""
     ^IKNOW("text","Upon exam two weeks ago the patient's weight was 146.5 pounds")=""
     
- When the Python script **iknow.py** is run the processed data is writren back to the IKNOW global based on the types of text in each sentence i.e.:
+ When the Python script **iknow.py** is run the processed data is writren back to the IKNOW global, based on the types of text in each sentence i.e.:
  
     ^IKNOW("text","I liked the striped pijamas, but the slippers didn't really fit with it", "Concept", "slippers")=""
   
@@ -29,7 +29,7 @@ The text **"After discussing his nausea, the patient didn't report suffering fro
  
 1) Create a free/paid Gitpod account - https://www.gitpod.io/
 2) Log into the account
-3) Open a new browser tab and add **gitpod.io/#https://github.com/RamSailopal/iknow** to the address - This will create a new Gitpod cloud instance with three terminal windows automatically opened. The second window will be the YottaDB environment and the second to run the iknow Python script (see the above Graphic for further details)
+3) Open a new browser tab and add **gitpod.io/#https://github.com/RamSailopal/iknow** to the address - This will create a new Gitpod cloud instance with three terminal windows automatically opened. The second window will be the YottaDB environment and the third window to run the iknow Python script (see the above Graphic for further details)
 
 
 # References
