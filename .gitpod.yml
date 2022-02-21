@@ -1,15 +1,11 @@
 tasks:
   - name: Docker-compose
-    before: echo "Building environment"
-    init: cd Docker && docker-compose up -d && gp sync-done prev
-    command: echo 'Built environment'
+    command: cd Docker && docker-compose up -d && gp sync-done prev
 
   - name: YottaDB-terminal
-    init: gp sync-await prev
-    command: docker exec -it yottadb /opt/yottadb/current/ydb
+    command: gp sync-await prev && docker exec -it yottadb /opt/yottadb/current/ydb
     openMode: split-right
  
   - name: iKnow-terminal
-    init: gp sync-await prev
-    command:  docker exec -it iknow /bin/bash -c "cd /home/iknow && bash"
+    command:  gp sync-await prev && docker exec -it iknow /bin/bash -c "cd /home/iknow && bash"
     openMode: split-right
