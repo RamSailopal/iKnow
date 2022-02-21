@@ -1,3 +1,6 @@
+github:
+  prebuilds:
+    master: true
 tasks:
   - name: Docker-compose
     init: cd Docker && docker-compose up -d && gp sync-done prev
