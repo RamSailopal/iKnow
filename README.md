@@ -7,7 +7,7 @@ Utilising mg_python, text is read from the database and then iKnow processed dat
 
 ![Alt text](iknow.webp?raw=true "iKnow")
 
-In the demonsteation, three pieces of text are processed by iKnow. The sentences sit in the global IKNOW:
+In the demonstration, three pieces of text are processed by iKnow. The sentences sit in the global IKNOW:
 
     ^IKNOW("text","After discussing his nausea, the patient didn't report suffering from chest pain, shortness of breath or tickling")=""
     ^IKNOW("text","I liked the striped pijamas, but the slippers didn't really fit with it")=""
